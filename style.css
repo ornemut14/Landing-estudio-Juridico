@@ -57,7 +57,9 @@ body {
 /* HERO */
 .hero {
   background: url("assets/banner.png") center/cover no-repeat;
-  height: 500px; /* ajusta según tu imagen */
+  aspect-ratio: 1920 / 635;
+  width: 100%;
+  background-size:contain;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,7 +117,7 @@ body {
 }
 /* SECCIÓN */
 .about {
-  background: #f5f5f5;
+  background: linear-gradient(180deg, #1b2638, #121a26);
   padding: 100px 20px;
 }
 
@@ -142,8 +144,10 @@ body {
 }
 
 .about-header h2 {
-  font-size: 38px;
-  color: #1f2c3f;
+  color: white;
+    font-size: 40px;
+  font-weight: 500;
+  margin-top: 10px;
 }
 
 /* GRID */
@@ -155,10 +159,11 @@ body {
 
 /* CARDS */
 .about-card {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
   padding: 35px 30px;
   border-radius: 8px;
-  border: 1px solid #e5e5e5;
+  border: 1px outset rgba(116, 121, 184, 0.03);
   text-align: left;
   transition: all 0.35s ease;
   position: relative;
@@ -181,29 +186,49 @@ body {
   width: 100%;
 }
 
+
 .about-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  border-color: #c9a66b;
+}
+
+.about-card:hover .icon{
+  transform: rotate(180deg)
 }
 
 /* ICONO */
 .icon {
+  transform: rotate(0deg);
+  transition: 1s ease;
   color: #c9a66b;
   font-size: 18px;
   margin-bottom: 15px;
 }
 
+.about-card:hover .icon{
+  transform: rotate(360deg);
+}
+
+.abt-card-title{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  color: white;
+}
+
 /* TITULO */
 .about-card h3 {
   font-size: 18px;
-  color: #1f2c3f;
+  color: #ffffff;
   margin-bottom: 12px;
 }
 
 /* TEXTO */
 .about-card p {
+  margin-top: 10px;
   font-size: 14px;
-  color: #666;
+  color: #f5f5f5;
   line-height: 1.6;
 }
 
@@ -233,6 +258,10 @@ body {
 
 /* EQUIPO */
 .equipo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: #f5f5f5;
   padding: 120px 20px;
   text-align: center;
@@ -279,19 +308,27 @@ body {
 .equipo-container {
   display: flex;
   justify-content: center;
+  margin-top: 50px;
   gap: 60px;
   flex-wrap: wrap;
 }
 
+.equipo-container2{
+  margin-top: 100px;
+}
+
 .persona {
-  max-width: 250px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .persona img {
-  width: 220px;
-  height: 220px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
+  object-position: top;
   border-radius: 50%;
   border: 1px solid #ddd;
   margin-bottom: 20px;
@@ -323,6 +360,32 @@ body {
 
 .persona a:hover {
   color: #000;
+}
+
+/* Consorcios */
+
+.consorcio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.consorcio img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 0px #1e2a3a;
+  transition: transform 0.8s ease;
+}
+
+.consorcio:hover img {
+  transform: scale(1.25);
+  box-shadow: 5px 4px 4px #1e2a3a;
 }
 
 /* SECCIÓN */
