@@ -16,14 +16,17 @@
 </div>
 
     <nav class="nav">
+      <a href="#inicio">INICIO</a>
       <a href="#quienes-somos">¿QUIÉNES SOMOS?</a>
+      <a href="#consorcio">CONSORCIOS</a>
       <a href="#servicios">¿QUÉ HACEMOS?</a>
+      <a href="#inspiracion">INSPIRACIÓN</a>
       <a href="#contacto">CONTÁCTENOS</a>
     </nav>
   </header>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" id="inicio">
     <div class="overlay"></div>
   </section>
 
@@ -90,14 +93,14 @@
   </div>
 </section>
   <!-- QUIENES SOMOS -->
-<section class="equipo">
+<section class="equipo" id="quienes-somos">
 
   <div class="equipo-header">
     <span class="subtitulo">¿Quiénes Somos?</span>
     <h2>Equipo Profesional</h2>
   </div>
 
-  <div class="equipo-container" id="quienes-somos">
+  <div class="equipo-container" >
 
     <!-- PERSONA 1 -->
     <div class="persona">
@@ -123,15 +126,15 @@
 
   </div>
 
-    <div class="equipo-container2">
+    <div class="equipo-container2" id="consorcio">
       <div class="equipo-header">
     <span class="subtitulo">Consorcios</span>
-    <h2>Fundadores de estos dos Consorcios de Empresas</h2>
+    <h2>Fundamos estos dos Consorcios de Empresas</h2>
   </div>
   <div class="equipo-container">
 
     <!-- Latitud Sur-->
-    <div class="consorcio">
+    <div class="consorcio" >
       <img src="assets/latitudsur.png" alt="Latitud Sur">
     </div>
 
@@ -146,8 +149,8 @@
 
 </section>
 
-<section class="areas">
-  <div class="container" id="servicios">
+<section class="areas" id="servicios">
+  <div class="container" >
 
     <div class="areas-header">
       <span class="subtitle">Áreas de Práctica</span>
@@ -249,16 +252,80 @@
       confianza con nuestros clientes y la sociedad.
     </p>
 
-    <a href="codigo-etica.pdf" target="_blank" class="btn-etica">
+    <a href="codigo-etica.pdf" target="_blank" rel="noopener noreferrer" class="btn-etica">
       Ver Código Completo
     </a>
 
   </div>
 </section>
-<section class="contact">
+<section class="ideas" id="inspiracion">
+<div class="container ideas-container">
+
+    <div class="ideas-header">
+      <span class="subtitle">Ideas para Crear Valor</span>
+      <h2>Inspiración que nos guía</h2>
+    </div>
+
+    <div class="ideas-grid">
+
+      <!-- Favaloro -->
+      <div class="idea-card">
+        <img src="assets/favaloro.jpg" alt="René Favaloro">
+        <div class="idea-content">
+          <p class="frase">“La inspiración permite crear nuevos escenarios y transformar la realidad.”</p>
+          <h4>Dr. René Favaloro</h4>
+          <span>Inspiración</span>
+        </div>
+      </div>
+
+      <!-- Steve Jobs -->
+      <div class="idea-card">
+        <img src="assets/Steve-Jobs.jpg" alt="Steve Jobs">
+        <div class="idea-content">
+          <p class="frase">“La innovación es lo que distingue a un líder de los demás.”</p>
+          <h4>Steve Jobs</h4>
+          <span>Talento</span>
+        </div>
+      </div>
+
+      <!-- Einstein -->
+      <div class="idea-card">
+        <img src="assets/Einstein.jpg" alt="Albert Einstein">
+        <div class="idea-content">
+          <p class="frase">“El conocimiento es limitado, pero la imaginación rodea el mundo.”</p>
+          <h4>Albert Einstein</h4>
+          <span>Conocimiento</span>
+        </div>
+      </div>
+
+      <!-- Drucker -->
+      <div class="idea-card">
+        <img src="assets/peter-drucker.jpg" alt="Peter Drucker">
+        <div class="idea-content">
+          <p class="frase">“La mejor forma de predecir el futuro es crearlo.”</p>
+          <h4>Peter Drucker</h4>
+          <span>Visión</span>
+        </div>
+      </div>
+
+      <!-- Zander -->
+      <div class="idea-card">
+        <img src="assets/Zander.jpg" alt="Benjamin Zander">
+        <div class="idea-content">
+          <p class="frase">“La pasión es la energía que impulsa los grandes logros.”</p>
+          <h4>Benjamin Zander</h4>
+          <span>Pasión</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<section class="contact" id="contacto">
   <div class="container">
 
-    <div class="contacto-form" id="contacto">
+    <div class="contacto-form" >
       <h1 class="subtitle">Contáctenos</h1>
       <h2>Reserve una Cita</h2>
     </div>
@@ -284,32 +351,50 @@
 
   </div>
 </section>
-<section class="contact-map">
-  <div class="contact-container">
+<footer class="footer">
 
-    <!-- INFO -->
-    <div class="contact-info">
-      <div class="box">
-        <h3>Nuestras vías de contacto</h3>
-        <ul>
-          <li>Tucumán 632 Sur, Capital, San Juan, CP 5400, Argentina</li>
-          <li>0264 4223720 – 0264 4229346</li>
-          <li>secretario@bmcgabogados.com.ar</li>
-        </ul>
-      </div>
-    </div>
+<div class="footer-container">
 
-    <!-- MAPA -->
-    <div class="map">
-      <iframe 
-        src="https://www.google.com/maps?q=Tucumán+632+Sur,+San+Juan,+Argentina&output=embed"
-        allowfullscreen=""
-        loading="lazy">
-      </iframe>
-    </div>
+<div class="footer-col">
+<h3>Estudio Jurídico Garade Allende & Asociados</h3>
+  <p>
+    Brindamos asesoramiento legal integral con un enfoque estratégico y personalizado, 
+    orientado a la resolución eficiente de conflictos y la protección de los intereses 
+    de nuestros clientes.
+  </p>
+</div>
 
-  </div>
-</section>
+<div class="footer-col">
+<h4>Áreas de Práctica</h4>
+<ul>
+    <li>Derecho Corporativo</li>
+    <li>Compliance & Derecho Penal Económico</li>
+    <li>Contratos y Asesoramiento Empresarial</li>
+    <li>Fusiones y Adquisiciones (M&A)</li>
+    <li>Litigios y Resolución de Conflictos</li>
+</ul>
+</div>
+
+<div class="footer-col">
+<h4>Contacto</h4>
+<a href="https://wa.me/542646033020" target="_blank">
+  <p>WhatsApp</p>
+</a>
+<a href="mailto:consultoraodc@gmail.com">
+  <p>Email</p>
+</a>
+<p>consultoraodc@gmail.com</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<p>© 2026 Estudio Jurídico Garade Allende & Asociados - Todos los derechos reservados</p>
+<p>Desarrollado por Ornella Mut</p>
+</div>
+
+</footer>
+
 <script>
   const reveals = document.querySelectorAll(".reveal");
 
