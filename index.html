@@ -19,7 +19,11 @@
  <div class="logo">
   <img src="assets/logo.png" alt="Garade Allende y Asociados">
 </div>
-
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
     <nav class="nav">
       <a href="#inicio">INICIO</a>
       <a href="#quienes-somos">¿QUIÉNES SOMOS?</a>
@@ -457,6 +461,18 @@
       if (elementTop < windowHeight - 100) {
         el.classList.add("active");
       }
+    });
+  });
+    const toggle = document.getElementById("menu-toggle");
+  const nav = document.querySelector(".nav");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+
+  document.querySelectorAll(".nav a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("active");
     });
   });
 </script>
