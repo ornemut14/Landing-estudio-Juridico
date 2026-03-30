@@ -545,7 +545,9 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
-
+.card-center {
+  grid-column: 2;
+}
 /* SECCION ETICA PREMIUM */
 .etica {
   padding-top: 0px;
