@@ -5,6 +5,17 @@
   box-sizing: border-box;
   font-family: 'Georgia', serif;
 }
+* {
+  max-width: 100%;
+}
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
 body {
   padding-top: 80px;
   background-color: #1e2a3a;
@@ -1416,7 +1427,7 @@ body {
 .compliance-credential {
   position: relative;
   border-radius: 15px;
-  height: 500px;
+  height: 300px;
   overflow: hidden;
 
   /* Transiciones suaves */
