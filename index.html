@@ -164,7 +164,13 @@
     </div>
   </div>
     </div>
-
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="modal-text"></div>
+  </div>
+</div>
     <div class="hrdivider">
     <img src="assets/hrdivider.png" />
   </div>
@@ -451,6 +457,97 @@
 </footer>
 
 <script>
+
+const modal = document.getElementById("modal");
+const modalText = document.getElementById("modal-text");
+const closeBtn = document.querySelector(".close");
+
+// TEXTOS
+const textos = [
+`LATITUD SUR CONSORCIO DE COOPERACION INTERNACIONAL (LSCCI)
+
+	Nuestro Consorcio está integrado por un conjunto de Empresas de nuestro País cuyo espíritu es la identidad de sus valores compartidos, tomados como base de todas las actividades colectivas y de cada miembro en sus deberes como empresarios y como personas; tiene domicilio en Avda. Santo Domingo S/N, Rodeo, Departamento de Iglesia, San Juan, y su objetivo principal es la prestación de servicios con los más altos estándares de calidad a la Industria Minera, Petróleo y Oil & Gas.
+
+OBJETIVOS
+
+	Generar procesos de riqueza genuinos en toda la cadena de valor de nuestras empresas asociadas, como así también compartir y optimizar recursos que permitan aumentar la capacidad de respuesta de cada empresa, fomentando la sinergia y la competitividad.
+
+MISION
+
+	La misión de LSCCI es convertirse en un socio estratégico y punto de contacto único y necesario de empresas de la Región, facilitando y promoviendo procesos simplificados y transparentes a lo largo de su cadena de valor.
+
+VISION
+
+	En un mundo donde la diferenciación es cada vez más difícil de alcanzar y sostener, sólo crean valor aquellos que buscan el liderazgo intelectual y desafían permanentemente las reglas del juego y los parámetros del sector donde participan.
+
+ENFOQUE : Cómo lo hacemos ?
+
+	Estamos convencidos que los desafíos de esta eran global, desregulada y de profundo cambio socio cultural requieren de soluciones que sólo pueden ser abordadas con un enfoque interdisciplinario que integre las ciencias, la tecnologíaía y la práctica de los negocios.
+
+	Pensamos que es más importante estrategizar que planificar, aunque entendemos que es lógico contar con una disciplina de planeamiento.
+
+	Entendemos que es imprescindible medir, pero siempre como base para entender y producir los datos clave que permitan generar valor.
+
+	Estamos convencidos que es esencial energizar a la organización para expandirla y permitir la diferenciación por sobre el cómodo reduccionismo.
+`,
+
+`ALTAS CUMBRES CONSORCIO DE COOPERACION INTERNACIONAL (ACCI)
+
+	Nuestro Consorcio está integrado por un conjunto de Empresas de nuestro País cuyo espíritu es la identidad de sus valores compartidos, tomados como base de todas las actividades colectivas y de cada miembro en sus deberes como empresarios y como personas; tiene domicilio en Avda. Cte. Rodriguez 269, Departamento Malargüe, Mendoza, y su objetivo principal es la prestación de servicios con los más altos estándares de calidad a la Industria Minera, Petróleo y Oil & Gas.
+
+OBJETIVOS
+
+	Generar procesos de riqueza genuinos en toda la cadena de valor de nuestras empresas asociadas, como así también compartir y optimizar recursos que permitan aumentar la capacidad de respuesta de cada empresa, fomentando la sinergia y la competitividad.
+
+MISION
+
+	La misión de ACCI es convertirse en un socio estratégico y punto de contacto único y necesario de empresas de la Región, facilitando y promoviendo procesos simplificados y transparentes a lo largo de su cadena de valor.
+
+VISION
+
+	En un mundo donde la diferenciación es cada vez más difícil de alcanzar y sostener, sólo crean valor aquellos que buscan el liderazgo intelectual y desafían permanentemente las reglas del juego y los parámetros del sector donde participan.
+
+ENFOQUE : Cómo lo hacemos ?
+
+	Estamos convencidos que los desafíos de esta eran global, desregulada y de profundo cambio socio cultural requieren de soluciones que sólo pueden ser abordadas con un enfoque interdisciplinario que integre las ciencias, la tecnologíaía y la práctica de los negocios.
+
+	Pensamos que es más importante estrategizar que planificar, aunque entendemos que es lógico contar con una disciplina de planeamiento.
+
+	Entendemos que es imprescindible medir, pero siempre como base para entender y producir los datos clave que permitan generar valor.
+
+	Estamos convencidos que es esencial energizar a la organización para expandirla y permitir la diferenciación por sobre el cómodo reduccionismo.
+
+`,
+
+`BANK FOR INVESTMENT PROJECT SA (BIPSA)
+	
+	Con el firme propósito de potenciar, asistir y desarrollar procesos de inversión genuinos en nuestro país y en el exterior, sistematizamos en un mismo soft todos los proyectos de inversión existentes en nuestra región, como así también los fondos de inversión disponibles y que sean compatibles con los proyectos incorporados a nuestras bases. Así, logramos reunir en un solo y único espacio los proyectos de inversión con su respectivo análisis de factibilidad y rentabilidad realizados por las más prestigiosas Universidades de Argentina y del mundo, y le sumamos a cada Proyecto un Programa de Integridad y Compliance adecuado a sus actividades. 
+
+	De esta manera nos garantizamos que los proyectos que integran la base de BIPSA sean confiables y sostenibles para los inversores, ya que además cuentan con un Programa de ESG que garantiza la seriedad y seguridad durante todo el tiempo de duración y vigencia del proyecto.
+
+	Contamos con programas intensivos para el desarrollo de áreas estratégicas tales como Agroindustria, Minería, Oil / Gas, Real Estate, Turismo, Logística y Consultoría, como así también el seguimiento y control sistémico de procesos en las etapas de análisis, decisión, desarrollo y ejecución de planes de acción puntuales de cada sector. 
+
+	BIPSA actúa como enlace entre empresas locales y operadores comerciales del exterior acercando oportunidades de inversión y promoviendo las iniciativas orientadas a dinamizar y acelerar procesos de inversión y oportunidades de negocios e intercambio enfocados al mercado internacional.
+
+	La Misión de BIPSA es convertirse en un socio estratégico y punto de contacto único y necesario de empresas PyMES de Argentina, facilitando y promoviendo procesos simplificados y transparentes a lo largo de todo el país, con absoluta  seguridad jurídica y altos estándares de calidad.
+
+`
+];
+
+// CLICK EN IMAGENES
+document.querySelectorAll(".consorcio img").forEach((img, index) => {
+  img.addEventListener("click", () => {
+    modal.style.display = "flex";
+    modalText.innerText = textos[index];
+  });
+});
+
+// CERRAR
+closeBtn.onclick = () => modal.style.display = "none";
+window.onclick = (e) => {
+  if (e.target == modal) modal.style.display = "none";
+};
+
   const reveals = document.querySelectorAll(".reveal");
 
   window.addEventListener("scroll", () => {
