@@ -391,22 +391,24 @@
     </div>
 
  <div class="form-wrapper">
-  <form class="form">
-    
-    <div class="row">
-      <input type="text" placeholder="Nombre">
-      <input type="text" placeholder="Teléfono">
-    </div>
+<form class="form" action="https://formsubmit.co/info@estudiogaradeallende.com" method="POST">
 
-    <input type="email" placeholder="Dirección de correo electrónico">
+  <input type="hidden" name="_next" value="https://estudiogaradeallende.com/gracias.html">
+  <input type="hidden" name="_captcha" value="false">
 
-    <textarea placeholder="Mensaje"></textarea>
+  <div class="row">
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="text" name="telefono" placeholder="Teléfono">
+  </div>
 
-    <div class="form-footer">
-      <button type="submit">Enviar</button>
-    </div>
+  <input type="email" name="email" placeholder="Dirección de correo electrónico" required>
+  <textarea name="mensaje" placeholder="Mensaje" required></textarea>
 
-  </form>
+  <div class="form-footer">
+    <button type="submit">Enviar</button>
+  </div>
+
+</form>
 </div>
 
   </div>
